@@ -33,9 +33,9 @@ public class FormController {
 		return new FormBean();
 	}
 	
-	@RequestMapping(method=RequestMethod.GET)
+	/*@RequestMapping(method=RequestMethod.GET)   removed empty method
 	public void form() {
-	}
+	}*/
 
 	@RequestMapping(method=RequestMethod.POST)
 	public String processSubmit(@Valid FormBean formBean, BindingResult result, 
