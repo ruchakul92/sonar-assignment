@@ -18,11 +18,11 @@ public class MaskFormatAnnotationFormatterFactory implements AnnotationFormatter
 		return fieldTypes;
 	}
 
-	public Parser<?> getParser(MaskFormat annotation) {
+	public Parser<?> getParser(MaskFormat annotation, Class<?> fieldType) {
 		return new MaskFormatter(annotation.value());
 	}
 
-	public Printer<?> getPrinter(MaskFormat annotation) {
+	public Printer<?> getPrinter(MaskFormat annotation, Class<?> fieldType) {
 		return new MaskFormatter(annotation.value());
 	}
 	
@@ -39,7 +39,7 @@ public class MaskFormatAnnotationFormatterFactory implements AnnotationFormatter
 			}
 		}
 
-		public String print(String object) {
+		public String print(String object, Locale locale) {
 			try {
 				return delegate.valueToString(object);
 			} catch (ParseException e) {
