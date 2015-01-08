@@ -18,10 +18,12 @@ public class MaskFormatAnnotationFormatterFactory implements AnnotationFormatter
 		return fieldTypes;
 	}
 
+@Override	
 	public Parser<?> getParser(MaskFormat annotation, Class<?> fieldType) {
 		return new MaskFormatter(annotation.value());
 	}
 
+@Override
 	public Printer<?> getPrinter(MaskFormat annotation, Class<?> fieldType) {
 		return new MaskFormatter(annotation.value());
 	}
@@ -39,6 +41,7 @@ public class MaskFormatAnnotationFormatterFactory implements AnnotationFormatter
 			}
 		}
 
+		@Override
 		public String print(String object, Locale locale) {
 			try {
 				return delegate.valueToString(object);
