@@ -40,7 +40,7 @@ public class RedirectController {
 	}
 
 	@RequestMapping(value="/{account}", method=RequestMethod.GET)
-	public String show(@PathVariable String account, @RequestParam(required=false) LocalDate date) {
+	public String show(/*@PathVariable String account, @RequestParam(required=false) LocalDate date*/) {
 		return "redirect/redirectResults";
 	}
 
