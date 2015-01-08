@@ -45,13 +45,17 @@ public class RequestDataController {
 				+ "' and variable 'foo=" + foo2 + " from path segment '" + path2 + "'";
 	}
 
-	@RequestMapping(value="Header", method=RequestMethod.GET)  //H changed from small to capital
-	public @ResponseBody String withHeader(@RequestHeader String Accept) {
+	
+	//H changed from small to capital
+	@RequestMapping(value="header", method=RequestMethod.GET)  
+	public @ResponseBody String withheader(@RequestHeader String Accept) {
 		return "Obtained 'Accept' header '" + Accept + "'";
 	}
 
-	@RequestMapping(value="Cookie", method=RequestMethod.GET)  //C changed from small to capital
-	public @ResponseBody String withCookie(@CookieValue String openid_provider) {
+	
+	//C changed from small to capital
+	@RequestMapping(value="cookie", method=RequestMethod.GET)  
+	public @ResponseBody String withcookie(@CookieValue String openid_provider) {
 		return "Obtained 'openid_provider' cookie '" + openid_provider + "'";
 	}
 
