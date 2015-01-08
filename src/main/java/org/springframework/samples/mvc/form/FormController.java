@@ -60,6 +60,4 @@ public class FormController {
 }
 
 
-/*@RequestMapping(method=RequestMethod.GET)   removed empty method
-public void form() {
-}*/
+

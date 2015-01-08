@@ -31,6 +31,3 @@ public class FileUploadController {
 
 
 
-/*@RequestMapping(method=RequestMethod.GET)    empty method commented
-public void fileUploadForm() {
-}*/
