@@ -21,9 +21,6 @@ public class FileUploadController {
 		model.addAttribute("ajaxRequest", AjaxUtils.isAjaxRequest(request));
 	}
 
-	@RequestMapping(method=RequestMethod.GET)
-	public void fileUploadForm() {
-	}
 
 	@RequestMapping(method=RequestMethod.POST)
 	public void processUpload(@RequestParam MultipartFile file, Model model) throws IOException {
@@ -31,3 +28,9 @@ public class FileUploadController {
 	}
 	
 }
+
+
+
+/*@RequestMapping(method=RequestMethod.GET)    empty method commented
+public void fileUploadForm() {
+}*/
